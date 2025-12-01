@@ -130,9 +130,11 @@ main {
     align-items: center;
     gap: 2rem;
     /* Reduced gap */
-    padding: 2rem 1rem;
+    padding: 0 1rem;
     /* Thinner margins */
-    min-height: 70vh;
+    min-height: 100vh;
+    /* Full screen height */
+    box-sizing: border-box;
 }
 
 /* Alternating Layout */

@@ -166,9 +166,9 @@ body {
     background-image: url('Adoption Desktop/9.png');
 }
 
+/* Hide section 10 on desktop - only 9 desktop images */
 .hero-section[data-section="10"] {
-    background-image: url('Adoption Desktop/9.png');
-    /* Reuse last desktop image for 10th slide */
+    display: none;
 }
 
 /* Optimize image rendering for text clarity */
@@ -363,6 +363,8 @@ body {
 
     .hero-section[data-section="10"] {
         background-image: url('Adoption Mobile/10.png');
+        display: block;
+        /* Show 10th section on mobile */
     }
 
     .hero-section {

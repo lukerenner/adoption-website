@@ -33,26 +33,26 @@ h6 {
 }
 
 h1 {
-    font-size: 3rem;
-    /* 48px */
+    font-size: 2.5rem;
+    /* Reduced from 3rem */
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     h1 {
-        font-size: 3.5rem;
-        /* 56px */
+        font-size: 3rem;
+        /* Reduced from 3.5rem */
     }
 }
 
 h2 {
-    font-size: 2rem;
-    /* 32px */
+    font-size: 1.75rem;
+    /* Reduced from 2rem */
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     h2 {
-        font-size: 2.5rem;
-        /* 40px */
+        font-size: 2.25rem;
+        /* Reduced from 2.5rem */
     }
 }
 
@@ -151,23 +151,22 @@ main {
     gap: 40px;
 }
 
-/* Desktop Grid Layout */
-@media (min-width: 1024px) {
+/* Desktop Grid Layout - Trigger earlier at 768px */
+@media (min-width: 768px) {
     .content-section {
-        padding: 100px 40px;
+        padding: 80px 32px;
         display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        /* Text slightly wider */
-        gap: 64px;
+        grid-template-columns: 1fr 1fr;
+        /* Equal columns at tablet */
+        gap: 48px;
         align-items: center;
         min-height: auto;
-        /* Let content dictate height, but keep spacing */
     }
 
     /* Alternating Layout */
     .content-section:nth-child(even) {
         grid-template-areas: "image text";
-        grid-template-columns: 0.9fr 1.1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .content-section:nth-child(even) .text-block {
@@ -176,6 +175,19 @@ main {
 
     .content-section:nth-child(even) .image-block {
         grid-area: image;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content-section {
+        padding: 100px 40px;
+        grid-template-columns: 1.1fr 0.9fr;
+        /* Refined ratio for large screens */
+        gap: 64px;
+    }
+
+    .content-section:nth-child(even) {
+        grid-template-columns: 0.9fr 1.1fr;
     }
 }
 

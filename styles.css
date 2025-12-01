@@ -140,11 +140,11 @@ p {
 
 main {
     padding-top: 80px;
-    /* Space for fixed navbar */
     width: 100%;
     overflow-x: hidden;
 }
 
+/* Mobile: Stack vertically */
 .content-section {
     padding: 60px 24px;
     width: 100%;
@@ -155,51 +155,50 @@ main {
     gap: 40px;
 }
 
-/* Desktop Grid Layout - Trigger earlier at 768px */
+/* Desktop: 2-column layout with precise proportions */
 @media (min-width: 768px) {
     .content-section {
-        padding: 80px 32px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        /* Equal columns at tablet */
-        gap: 48px;
+        flex-direction: row;
         align-items: center;
-        min-height: auto;
+        justify-content: center;
+        min-height: 100vh;
+        max-width: none;
+        padding: 0 5%;
+        /* 5% margin on each side */
+        gap: 5%;
+        /* 5% gap between text and image */
+        box-sizing: border-box;
     }
-
-    /* Alternating Layout */
-    .content-section:nth-child(even) {
-        grid-template-areas: "image text";
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-.content-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 0 5%;
-    /* 5% margin on each side */
-    gap: 5%;
-    /* 5% gap between text and image */
-    box-sizing: border-box;
 }
 
 .text-block {
-    width: 30%;
-    /* 30% of page width */
-    flex-shrink: 0;
+    width: 100%;
+    /* Full width on mobile */
+}
+
+@media (min-width: 768px) {
+    .text-block {
+        width: 30%;
+        /* 30% of page width on desktop */
+        flex-shrink: 0;
+    }
 }
 
 .image-block {
-    width: 50%;
-    /* 50% of page width */
-    flex-shrink: 0;
+    width: 100%;
+    /* Full width on mobile */
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width: 768px) {
+    .image-block {
+        width: 50%;
+        /* 50% of page width on desktop */
+        flex-shrink: 0;
+    }
 }
 
 .image-block img {

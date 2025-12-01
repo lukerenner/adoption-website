@@ -271,6 +271,13 @@ body {
     transform: translateY(0);
 }
 
+/* Mobile: Make navbar scroll with page */
+@media (max-width: 768px) {
+    .nav-header {
+        position: relative;
+    }
+}
+
 /* ===== Footer ===== */
 .footer {
     background: #2d3748;

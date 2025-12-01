@@ -172,15 +172,9 @@ main {
         grid-template-areas: "image text";
         grid-template-columns: 1fr 1fr;
     }
+}
 
-    .content-section:nth-child(even) .text-block {
-        grid-area: text;
-    }
-
-    .content-section:nth-child(even) .image-block {
-        grid-area: image;
-    }
-
+.content-section {
     display: flex;
     align-items: center;
     justify-content: center;

@@ -25,16 +25,27 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    color: #2d3748;
+    font-weight: 800;
+    /* Bolder headings */
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: #1a202c;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.8rem;
 }
 
 p {
     margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    color: #4a5568;
+    font-size: 1.15rem;
+    color: #2d3748;
+    line-height: 1.7;
 }
 
 /* ===== Navigation Bar ===== */
@@ -108,17 +119,20 @@ p {
 main {
     padding-top: 80px;
     /* Space for fixed navbar */
-    max-width: 1200px;
+    max-width: 1800px;
+    /* Much wider layout */
     margin: 0 auto;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
 }
 
 .content-section {
     display: flex;
     align-items: center;
-    gap: 4rem;
-    padding: 4rem 2rem;
-    min-height: 80vh;
+    gap: 2rem;
+    /* Reduced gap */
+    padding: 2rem 1rem;
+    /* Thinner margins */
+    min-height: 70vh;
 }
 
 /* Alternating Layout */
@@ -127,20 +141,23 @@ main {
 }
 
 .text-block {
-    flex: 1;
+    flex: 0.8;
+    /* Smaller text block */
     padding: 1rem;
 }
 
 .image-block {
-    flex: 1;
+    flex: 1.4;
+    /* Much larger images */
     position: relative;
 }
 
 .image-block img {
     width: 100%;
     height: auto;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    /* More rounded as per reference */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
     transition: transform 0.3s ease;
 }
 

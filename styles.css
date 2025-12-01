@@ -141,20 +141,27 @@ main {
 }
 
 .text-block {
-    flex: 0.8;
-    /* Smaller text block */
-    padding: 1rem;
+    flex: 1;
+    /* Equal width */
+    padding: 2rem;
+    /* More breathing room for text */
 }
 
 .image-block {
-    flex: 1.4;
-    /* Much larger images */
+    flex: 1;
+    /* Equal width */
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .image-block img {
     width: 100%;
     height: auto;
+    max-height: 80vh;
+    /* Prevent overly tall images */
+    object-fit: cover;
     border-radius: 30px;
     /* More rounded as per reference */
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);

@@ -33,26 +33,26 @@ h6 {
 }
 
 h1 {
-    font-size: 2.5rem;
-    /* Reduced from 3rem */
+    font-size: 3rem;
+    /* 48px */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     h1 {
-        font-size: 3rem;
-        /* Reduced from 3.5rem */
+        font-size: 3.5rem;
+        /* 56px */
     }
 }
 
 h2 {
-    font-size: 1.75rem;
-    /* Reduced from 2rem */
+    font-size: 2rem;
+    /* 32px */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     h2 {
-        font-size: 2.25rem;
-        /* Reduced from 2.5rem */
+        font-size: 2.5rem;
+        /* 40px */
     }
 }
 
@@ -69,19 +69,15 @@ p {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 80px;
-    /* Explicit height */
-    background-color: #ffffff;
-    /* Solid white */
-    padding: 0 2rem;
-    /* Vertical padding handled by flex alignment */
-    z-index: 9999;
-    /* Very high z-index */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid #eee;
-    display: flex;
-    align-items: center;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    /* Cleaner white background */
+    backdrop-filter: blur(12px);
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease;
 }
 
 .nav-content {
@@ -155,22 +151,23 @@ main {
     gap: 40px;
 }
 
-/* Desktop Grid Layout - Trigger earlier at 768px */
-@media (min-width: 768px) {
+/* Desktop Grid Layout */
+@media (min-width: 1024px) {
     .content-section {
-        padding: 80px 32px;
+        padding: 100px 40px;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        /* Equal columns at tablet */
-        gap: 48px;
+        grid-template-columns: 1.1fr 0.9fr;
+        /* Text slightly wider */
+        gap: 64px;
         align-items: center;
         min-height: auto;
+        /* Let content dictate height, but keep spacing */
     }
 
     /* Alternating Layout */
     .content-section:nth-child(even) {
         grid-template-areas: "image text";
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 0.9fr 1.1fr;
     }
 
     .content-section:nth-child(even) .text-block {
@@ -179,19 +176,6 @@ main {
 
     .content-section:nth-child(even) .image-block {
         grid-area: image;
-    }
-}
-
-@media (min-width: 1024px) {
-    .content-section {
-        padding: 100px 40px;
-        grid-template-columns: 1.1fr 0.9fr;
-        /* Refined ratio for large screens */
-        gap: 64px;
-    }
-
-    .content-section:nth-child(even) {
-        grid-template-columns: 0.9fr 1.1fr;
     }
 }
 

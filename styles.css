@@ -29,7 +29,8 @@ h6 {
     /* Bolder headings */
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    color: #1a202c;
+    color: #0f392b;
+    /* Dark Green from reference */
     letter-spacing: -0.02em;
 }
 
@@ -137,11 +138,6 @@ main {
     box-sizing: border-box;
 }
 
-/* Alternating Layout */
-.content-section:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
 .text-block {
     flex: 1;
     /* Equal width */
@@ -177,6 +173,31 @@ main {
 /* Full width image for collage */
 .image-block.full-width {
     width: 100%;
+}
+
+/* Section 2: Facts Grid */
+.facts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.facts-grid p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Make emojis larger in facts grid */
+.facts-grid p::first-letter {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
 }
 
 /* Favorites List */

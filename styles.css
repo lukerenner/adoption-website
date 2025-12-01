@@ -1,0 +1,392 @@
+/* ===== CSS Reset & Base Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+    background-color: #e6e3e3;
+}
+
+/* ===== Navigation Bar ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.95), rgba(255, 142, 83, 0.95));
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.nav-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-phone {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-phone:hover {
+    transform: scale(1.05);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-contact {
+    background: white;
+    color: #ff6b6b;
+    padding: 0.7rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-contact:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    background: #fff5f5;
+}
+
+/* ===== Hero Sections ===== */
+.hero-section {
+    min-height: calc(100vh - 4rem);
+    min-height: calc(100svh - 4rem);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 2rem 4rem;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* Overlay removed - showing images at full brightness */
+
+.section-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.section-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    letter-spacing: -1px;
+}
+
+.section-content h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: -0.5px;
+}
+
+/* Desktop Background Images */
+.hero-section[data-section="1"] {
+    background-image: url('Adoption Desktop/1.png');
+}
+
+.hero-section[data-section="2"] {
+    background-image: url('Adoption Desktop/2.png');
+}
+
+.hero-section[data-section="3"] {
+    background-image: url('Adoption Desktop/3.png');
+}
+
+.hero-section[data-section="4"] {
+    background-image: url('Adoption Desktop/4.png');
+}
+
+.hero-section[data-section="5"] {
+    background-image: url('Adoption Desktop/5.png');
+}
+
+.hero-section[data-section="6"] {
+    background-image: url('Adoption Desktop/6.png');
+}
+
+.hero-section[data-section="7"] {
+    background-image: url('Adoption Desktop/7.png');
+}
+
+.hero-section[data-section="8"] {
+    background-image: url('Adoption Desktop/8.png');
+}
+
+.hero-section[data-section="9"] {
+    background-image: url('Adoption Desktop/9.png');
+}
+
+.hero-section[data-section="10"] {
+    background-image: url('Adoption Desktop/9.png');
+    /* Reuse last desktop image for 10th slide */
+}
+
+/* Optimize image rendering for text clarity */
+.hero-section {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* ===== Contact Section ===== */
+.contact-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 5rem 2rem;
+    color: white;
+}
+
+.contact-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contact-container>p {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: white;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: white;
+    color: #667eea;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    background: #f0f0f0;
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* ===== Footer ===== */
+.footer {
+    background: #2d3748;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.95rem;
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+    .nav-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.8rem;
+    }
+
+    .nav-title {
+        font-size: 1.1rem;
+    }
+
+    .nav-actions {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .nav-phone {
+        font-size: 1rem;
+    }
+
+    .section-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .section-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-container h2 {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    /* Mobile Background Images */
+    .hero-section[data-section="1"] {
+        background-image: url('Adoption Mobile/1.png');
+    }
+
+    .hero-section[data-section="2"] {
+        background-image: url('Adoption Mobile/2.png');
+    }
+
+    .hero-section[data-section="3"] {
+        background-image: url('Adoption Mobile/3.png');
+    }
+
+    .hero-section[data-section="4"] {
+        background-image: url('Adoption Mobile/4.png');
+    }
+
+    .hero-section[data-section="5"] {
+        background-image: url('Adoption Mobile/5.png');
+    }
+
+    .hero-section[data-section="6"] {
+        background-image: url('Adoption Mobile/6.png');
+    }
+
+    .hero-section[data-section="7"] {
+        background-image: url('Adoption Mobile/7.png');
+    }
+
+    .hero-section[data-section="8"] {
+        background-image: url('Adoption Mobile/8.png');
+    }
+
+    .hero-section[data-section="9"] {
+        background-image: url('Adoption Mobile/9.png');
+    }
+
+    .hero-section[data-section="10"] {
+        background-image: url('Adoption Mobile/10.png');
+    }
+
+    .hero-section {
+        margin: 1.5rem 2rem;
+        min-height: calc(100vh - 3rem);
+        min-height: calc(100svh - 3rem);
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.8rem 1rem;
+    }
+
+    .section-content {
+        padding: 1.5rem;
+    }
+
+    .section-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .section-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section {
+        margin: 1rem;
+        min-height: calc(100vh - 2rem);
+        min-height: calc(100svh - 2rem);
+        border-radius: 16px;
+    }
+}

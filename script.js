@@ -18,23 +18,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Fade-in animation on scroll
-    const observerOptions = {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function (entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Only animate once
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.content-section').forEach(section => {
-        section.classList.add('fade-in-section'); // Add base class
-        observer.observe(section);
-    });
+    // Fade-in animation removed for stability
 });

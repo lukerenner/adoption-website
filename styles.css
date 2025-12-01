@@ -148,6 +148,27 @@ main {
     transform: scale(1.02);
 }
 
+/* Full width image for collage */
+.image-block.full-width {
+    width: 100%;
+}
+
+/* Favorites List */
+.favorites-list {
+    list-style: none;
+    padding: 0;
+}
+
+.favorites-list li {
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+}
+
+.favorites-list strong {
+    color: #2d3748;
+    font-weight: 600;
+}
+
 /* ===== Contact Section ===== */
 .contact-section {
     background: #fff;

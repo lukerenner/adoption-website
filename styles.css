@@ -261,16 +261,6 @@ main {
     .content-section:nth-child(2) {
         flex-direction: row-reverse;
     }
-
-    .content-section:nth-child(2) .image-block {
-        width: 65%;
-        /* Smaller image for Facts section */
-    }
-
-    .content-section:nth-child(2) .text-block {
-        width: 35%;
-        /* Adjust text width accordingly */
-    }
 }
 
 /* Section 5 (About Luke): Flip columns and increase image height */

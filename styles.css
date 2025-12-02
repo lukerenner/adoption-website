@@ -220,7 +220,6 @@ main {
 .image-block img {
     width: 100%;
     height: auto;
-    max-height: 80vh;
     object-fit: cover;
     border-radius: 30px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);

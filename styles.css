@@ -179,8 +179,8 @@ main {
         align-items: center;
         justify-content: center;
         min-height: 100vh;
-        padding: 0 10%;
-        /* 10% margin on each side = 80% content width */
+        padding: 50px 10%;
+        /* 50px top/bottom for 100px spacing between sections */
         gap: 10%;
         /* 10% gap between columns */
         box-sizing: border-box;

@@ -234,6 +234,7 @@ main {
 /* Section 3: Full-Height Collage - Taller */
 .section-3-collage {
     padding: 0 !important;
+    /* No padding for full-width collage */
     gap: 0 !important;
     min-height: 150vh !important;
     /* Increased to prevent cropping */

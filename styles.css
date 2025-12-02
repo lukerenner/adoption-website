@@ -230,24 +230,23 @@ main {
     transform: scale(1.02);
 }
 
-/* Section 3: Photo Collage with Same Margins as Other Sections */
-/* Uses default section padding/margins */
-
-.section-3-collage .image-block.full-width {
-    width: 100%;
-    /* Full width within the content area */
-    height: auto;
+/* Section 3: Single-column image with margins, no height limit */
+.section-3-single-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.section-3-collage .image-block.full-width img {
+.section-3-single-image .image-block {
+    width: 100%;
+    max-width: none;
+}
+
+.section-3-single-image .image-block img {
     width: 100%;
     height: auto;
-    object-fit: cover;
     border-radius: 30px;
-    /* Match other images */
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-    transform: scaleY(1.5);
-    /* Increase height by 50% */
 }
 
 /* Section 6: Reversed columns (Image Left, Text Right) */

@@ -246,6 +246,8 @@ main {
     border-radius: 30px;
     /* Match other images */
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    transform: scaleY(1.5);
+    /* Increase height by 50% */
 }
 
 /* Section 6: Reversed columns (Image Left, Text Right) */

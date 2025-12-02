@@ -201,6 +201,11 @@ main {
     gap: 40px;
 }
 
+/* Ensure image is always first on mobile */
+.content-section .image-block {
+    order: -1;
+}
+
 /* Desktop: 2-column layout with 80% content width, 10% margins */
 @media (min-width: 768px) {
     .content-section {
@@ -213,6 +218,11 @@ main {
         gap: 10%;
         /* 10% gap between columns */
         box-sizing: border-box;
+    }
+
+    /* Reset order on desktop to respect HTML structure and row-reverse */
+    .content-section .image-block {
+        order: 0;
     }
 }
 

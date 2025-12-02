@@ -14,7 +14,7 @@ body {
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
-    background-color: #e6e3e3;
+    background-color: #E5E2E2;
     /* Light Gray */
 }
 
@@ -74,8 +74,8 @@ p.normal-weight {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(230, 227, 227, 0.95);
-    /* #e6e3e3 with transparency */
+    background: rgba(229, 226, 226, 0.95);
+    /* #E5E2E2 with transparency */
     backdrop-filter: blur(10px);
     padding: 1rem 2rem;
     z-index: 1000;
@@ -102,8 +102,10 @@ p.normal-weight {
 .nav-phone {
     color: #4a5568;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 700;
+    /* Bolder */
+    font-size: 1.1rem;
+    /* Larger */
     transition: color 0.3s ease;
     text-align: center;
     justify-self: center;

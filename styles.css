@@ -177,13 +177,12 @@ main {
     .content-section {
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
-        /* Distribute space (20% gap) */
+        justify-content: center;
         min-height: 100vh;
         padding: 5vh 10%;
-        /* 10% margins */
-        gap: 0;
-        /* Let space-between handle the gap */
+        /* Reduced spacing - about the width of one margin */
+        gap: 10%;
+        /* 10% gap between columns */
         box-sizing: border-box;
     }
 }
@@ -196,7 +195,7 @@ main {
 @media (min-width: 768px) {
     .text-block {
         width: 25%;
-        /* 25% width */
+        /* 25% of the 80% content area */
         flex-shrink: 0;
     }
 }
@@ -212,8 +211,8 @@ main {
 
 @media (min-width: 768px) {
     .image-block {
-        width: 55%;
-        /* 55% width */
+        width: 75%;
+        /* 75% of the 80% content area */
         flex-shrink: 0;
     }
 }

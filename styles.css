@@ -232,9 +232,7 @@ main {
 }
 
 /* Section 3: Photo Collage with Same Margins as Other Sections */
-.section-3-collage {
-    /* Use default section padding/margins */
-}
+/* Uses default section padding/margins */
 
 .section-3-collage .image-block.full-width {
     width: 100%;

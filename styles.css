@@ -179,8 +179,8 @@ main {
         align-items: center;
         justify-content: center;
         min-height: 100vh;
-        padding: 50px 10%;
-        /* 50px top/bottom for 100px spacing between sections */
+        padding: 5vh 10%;
+        /* Reduced spacing - about the width of one margin */
         gap: 10%;
         /* 10% gap between columns */
         box-sizing: border-box;
@@ -235,9 +235,18 @@ main {
 .section-3-collage {
     padding: 0 !important;
     /* No padding for full-width collage */
+    margin: 0 !important;
+    /* No margin either */
     gap: 0 !important;
     min-height: 150vh !important;
     /* Increased to prevent cropping */
+}
+
+@media (min-width: 768px) {
+    .section-3-collage {
+        padding: 0 !important;
+        /* Override desktop padding */
+    }
 }
 
 .section-3-collage .image-block.full-width {
